@@ -3,12 +3,25 @@ package com.ssw;
 public class Main {
 
     public static void main(String[] args) throws Exception {
-        Ellipse ellipse = new Ellipse();
+        Ellipse ellipse = new Ellipse(7, 2);
 
-        ellipse.setA(7);
-        ellipse.setB(2);
+        Ellipse ellipse1 = new Ellipse(ellipse);
 
-        System.out.println(String.format("A = %d", ellipse.getA()));
-        System.out.println(String.format("B = %d", ellipse.getB()));
+
+        Ellipse ellipse2 = ellipse.clone();
+
+        ellipse.setA(45);
+
+        System.out.println(String.format("A = %d", ellipse2.getA()));
+        System.out.println(String.format("B = %d", ellipse2.getB()));
+
+        System.out.println();
+        System.out.println(ellipse.toString());
+
+        System.out.println();
+        System.out.println(ellipse1.equals(ellipse));
+
+        System.out.println();
+        System.out.println(ellipse1.hashCode());
     }
 }
