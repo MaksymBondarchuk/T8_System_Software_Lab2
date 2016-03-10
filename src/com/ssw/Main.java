@@ -7,10 +7,9 @@ public class Main {
 
         Ellipse ellipse1 = new Ellipse(ellipse);
 
-
         Ellipse ellipse2 = ellipse.clone();
 
-        ellipse.setA(45);
+        ellipse2.setA(45);
 
         System.out.println(String.format("A = %d", ellipse2.getA()));
         System.out.println(String.format("B = %d", ellipse2.getB()));
@@ -22,6 +21,7 @@ public class Main {
         System.out.println(ellipse1.equals(ellipse));
 
         System.out.println();
+        System.out.println(ellipse.hashCode());
         System.out.println(ellipse1.hashCode());
     }
 }
